@@ -36,4 +36,30 @@ it("should return Quotient ",()=>{
    expect(Quotient).toEqual(5);
 });
 
+it("jasmine matcher-toBeNull",()=>{
+
+  var nullValue= null;
+  var valueUndefined;
+  var notNull="notNull";
+
+  expect(null).toBeNull();
+  expect(nullValue).toBeNull();
+  expect(valueUndefined).not.toBeNull();
+  expect(notNull).not.toBeNull();
+});
+
+it("jasmine matcher-toContain",()=>{
+
+  var MyArray =["jasmine","dotnetoffice","tutorials"];
+
+      expect([1,2,3]).toContain(2);
+      expect([1,2,3]).toContain(2,3);
+      expect(MyArray).toContain("jasmine");
+      expect([1,2,3]).not.toContain(4);
+      expect(MyArray).not.toContain("dot");
+  });
+
+
+
+
 });
